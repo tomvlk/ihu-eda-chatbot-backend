@@ -478,3 +478,7 @@ venv.bak/
 # mypy
 .mypy_cache/
 
+
+### Project
+/key.json
+
