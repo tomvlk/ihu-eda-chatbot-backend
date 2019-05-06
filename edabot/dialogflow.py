@@ -31,4 +31,4 @@ class Dialogflow:
 		response = self.session_client.detect_intent(
 			session=session, query_input=query_input,
 		)
-		return response.query_result.fulfillment_text
+		return response.query_result.fulfillment_text, response.response_id

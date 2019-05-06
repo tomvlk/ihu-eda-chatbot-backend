@@ -51,5 +51,5 @@ class MessageHandler(tornado.web.RequestHandler):
 		response = flow.query(data['text'], session)
 
 		self.write(dict(
-			response=response
+			response=response[0], id=response[1],
 		))
