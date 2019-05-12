@@ -1,4 +1,5 @@
 import json
+import logging
 import os
 from json import JSONDecodeError
 
@@ -41,10 +42,11 @@ class MessageHandler(tornado.web.RequestHandler):
 		flow = Dialogflow()
 		session = flow.load_session(session_id)
 		try:
-			data = json.loads(self.request.body)
+			data = json.loads(self.request.body.decode())
 			if 'text' not in data:
 				raise Exception('Text not in body')
-		except:
+		except Exception as e:
+			logging.exception(e)
 			self.send_error(status_code=400)
 			return
 
