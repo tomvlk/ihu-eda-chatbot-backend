@@ -3,27 +3,33 @@
 ## Getting started
 
 Requirements:
-    - NodeJS 10+
-    - Yarn 1.15+
-    - Angular CLI 7.3.8+
-    - Python 3.6+
-    - Pip
+- NodeJS 10+
+- Yarn 1.15+
+- Angular CLI 7.3.8+
+- Python 3.6+
+- Pip
 
 ### 1. Cloning the projects
 
 In order to get the project running you need to have the following folder structure:
 
+```
 - empty_folder/
     |
     |- eda-chatbot-frontend/
     |   Clone the project from: https://github.com/tomvlk/ihu-eda-chatbot-frontend.git with:
-    |   `git clone https://github.com/tomvlk/ihu-eda-chatbot-frontend.git eda-chatbot-frontend`
+    |   git clone https://github.com/tomvlk/ihu-eda-chatbot-frontend.git eda-chatbot-frontend
     |
     |- eda-chatbot-backend/
     |   Clone the project from: https://github.com/tomvlk/ihu-eda-chatbot-backend.git with:
-    |   `git clone https://github.com/tomvlk/ihu-eda-chatbot-backend.git eda-chatbot-backend`
-
+    |   git clone https://github.com/tomvlk/ihu-eda-chatbot-backend.git eda-chatbot-backend
+```
 This way the backend knows where the frontend dist folder is located.
+
+*Command on linux to create this structure from the empty folder perspective (make sure you CD into the empty folder):*
+```
+git clone https://github.com/tomvlk/ihu-eda-chatbot-frontend.git eda-chatbot-frontend && git clone https://github.com/tomvlk/ihu-eda-chatbot-backend.git eda-chatbot-backend
+```
 
 ### 2. Preparing Dialogflow project
 
@@ -39,21 +45,23 @@ This way the backend knows where the frontend dist folder is located.
 ### 3. Prepare the frontend
 
 1. Go to the frontend folder in your favourite command prompt console.
-2. Install the dependencies with Yarn:
+2. Install the dependencies with Yarn:  
     `yarn install`
-3. Build the frontend with Angular CLI:
+3. Build the frontend with Angular CLI:  
     `ng build`
 4. The frontend should be ready and build. You can test this by navigating to the `dist` folder in the frontend project folder.
 
 ### 4. Prepare the backend
 
-1. Create a virtualenv in the backend folder with:
-    `virtualenv -p python3 env` or on Windows: `virtualenv env` (make sure Python 3.6+ is installed as default on Windows).
-2. Activate the virtualenv:
-    Linux: `source env/bin/activate`
-    Windows (Generic): `.\env\Scripts\activate.bat`
+1. Create a virtualenv in the backend folder with:  
+    `virtualenv -p python3 env`  
+    or on Windows: `virtualenv env` (make sure Python 3.6+ is installed as default on Windows).
+
+2. Activate the virtualenv:  
+    Linux: `source env/bin/activate`  
+    Windows (Generic): `.\env\Scripts\activate.bat`  
     Windows (PowerShell): `.\env\Scripts\activate.ps1`
-3. Install or update backend dependencies:
+3. Install or update backend dependencies:  
     `pip install -r requirements.txt -U`
 
 ### Run the project
