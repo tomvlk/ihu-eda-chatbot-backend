@@ -1,4 +1,5 @@
 import os
+import sys
 import tornado.ioloop
 
 from edabot.app import create_app
@@ -19,6 +20,7 @@ def execute_from_cli():
 		tornado.ioloop.IOLoop.current().start()
 	except KeyboardInterrupt:
 		print('Shutting down API server...')
+		sys.exit(0)
 
 
 if __name__ == '__main__':
